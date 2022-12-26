@@ -10,4 +10,7 @@ test/
 .eslintrc.js
 .gitattributes
 .gitignore
+.mocharc.js
+.prettierignore
+.prettierrc.yml
 package-lock.json
