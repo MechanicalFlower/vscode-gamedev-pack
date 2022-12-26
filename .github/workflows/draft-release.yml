@@ -88,6 +88,6 @@ jobs:
           gh api -X POST https://uploads.github.com/repos/${{ github.repository }}/releases/$id/assets \
           -f name="${{ steps.P.outputs.vsix }}" \
           -H "Content-Type: application/octet-stream" \
-          --input "${{ steps.P.outputs.vsix }}" \
+          --input ".publish/${{ steps.P.outputs.vsix }}" \
           > $asset || exit
           echo $(node -p "require('./$asset').browser_download_url")
