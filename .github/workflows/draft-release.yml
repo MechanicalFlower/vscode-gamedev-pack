@@ -54,7 +54,7 @@ jobs:
         run: unzip -l -vqq ".publish/${{ steps.P.outputs.vsix }}" | awk '{print $8}'
 
       - name: Save vsix as artifact for backup
-        uses: actions/upload-artifact@v3
+        uses: actions/upload-artifact@v4
         with:
           path: .publish/${{ steps.P.outputs.vsix }}
           name: vsix
